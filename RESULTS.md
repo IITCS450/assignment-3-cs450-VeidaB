@@ -1,0 +1,4 @@
+SETUP: Running 2 children, one on 10 tickets and one on 30     tickets.
+WORKLOAD: Each child runs a CPU-bound loop. CPU usage is determined entirely by the scheduler.
+OBSERVED SHARES: The CPU share are aproximated from the ticket ratios because the parent cannot access the child's counters. Over a sufficiently long run, the shares would still aproximate to this.
+NOTES ON VARIANCE: During short runs, shares will fluctuate more because of the randomness of lottery draws. Over long runs, the share ratios will closely match the ticket ratios due to the law of large numbers ie. each proccess's number of wins will aproach their expected wins based on ticket numbers.
